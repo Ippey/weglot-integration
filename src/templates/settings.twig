@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * weglot-integration plugin for Craft CMS 3.x
+ *
+ * weglot-integration Settings.twig
+ *
+ * @author    Ippei Sumida
+ * @copyright Copyright (c) 2020 Ippei Sumida
+ * @link      https://unplat.info
+ * @package   Weglotintegration
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("ippey\\weglotintegration\\assetbundles\\weglotintegration\\WeglotintegrationAsset") %}
+
+{{ forms.autosuggestField({
+    label: 'API Key',
+    instructions: 'Enter your WEGLOT API KEY.',
+    id: 'apiKey',
+    name: 'apiKey',
+    suggestEnvVars: true,
+    value: settings.apiKey}) }}

@@ -1,0 +1,49 @@
+{
+    "name": "ippey/weglot-integration",
+    "description": "weglot integration",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "weglot-integration"
+    ],
+    "support": {
+        "docs": "https://github.com/Ippey/weglot-integration/blob/master/README.md",
+        "issues": "https://github.com/Ippey/weglot-integration/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ippei Sumida",
+            "homepage": "https://unplat.info"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0",
+        "weglot/weglot-php": "^1.0"
+    },
+    "require-dev": {
+      "codeception/codeception": "^3.0",
+      "vlucas/phpdotenv": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "ippey\\weglotintegration\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "weglot-integration",
+        "handle": "weglot-integration",
+        "developer": "Ippei Sumida",
+        "developerUrl": "https://unplat.info",
+        "documentationUrl": "https://github.com/Ippey/weglot-integration/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/Ippey/weglot-integration/master/CHANGELOG.md",
+        "components": {
+            "weglotService": "ippey\\weglotintegration\\services\\WeglotService"
+        },
+        "class": "ippey\\weglotintegration\\Weglotintegration"
+    }
+}
