@@ -14,9 +14,18 @@ use ippey\weglotintegration\Weglotintegration;
 
 use Craft;
 
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;
 use Twig\TwigFunction;
+use Weglot\Client\Api\Exception\ApiError;
+use Weglot\Client\Api\Exception\InputAndOutputCountMatchException;
+use Weglot\Client\Api\Exception\InvalidWordTypeException;
+use Weglot\Client\Api\Exception\MissingRequiredParamException;
+use Weglot\Client\Api\Exception\MissingWordsOutputException;
+use yii\base\Exception;
 
 /**
  * Twig can be extended in many ways; you can add extra tags, filters, tests, operators,
@@ -73,13 +82,24 @@ class WeglotintegrationTwigExtension extends AbstractExtension
      * @param string $from
      * @param string $to
      * @return string
+     * @throws ApiError
+     * @throws InputAndOutputCountMatchException
+     * @throws InvalidWordTypeException
+     * @throws MissingRequiredParamException
+     * @throws MissingWordsOutputException
      */
     public function translate($text, $from = '', $to = '')
     {
-        $service = Weglotintegration::getInstance()->weglotService;
-        return $service->translate($text, $from, $to);
+        return Weglotintegration::getInstance()->weglotService->translate($text, $from, $to);
     }
 
+    /**
+     * @return string
+     * @throws LoaderError
+     * @throws RuntimeError
+     * @throws SyntaxError
+     * @throws Exception
+     */
     public function snipet()
     {
         $service = Weglotintegration::getInstance()->weglotService;
