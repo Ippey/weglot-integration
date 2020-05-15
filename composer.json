@@ -1,14 +1,16 @@
 {
     "name": "ippey/weglot-integration",
-    "description": "weglot integration",
+    "description": "WEGLOT integration",
     "type": "craft-plugin",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "keywords": [
         "craft",
         "cms",
         "craftcms",
         "craft-plugin",
-        "weglot-integration"
+        "weglot-integration",
+        "weglot",
+        "translation"
     ],
     "support": {
         "docs": "https://github.com/Ippey/weglot-integration/blob/master/README.md",
@@ -35,7 +37,7 @@
         }
     },
     "extra": {
-        "name": "weglot-integration",
+        "name": "WEGLOT Integration",
         "handle": "weglot-integration",
         "developer": "Ippei Sumida",
         "developerUrl": "https://unplat.info",

@@ -1,12 +1,11 @@
 # weglot-integration plugin for Craft CMS 3.x
 
-weglot integration
+WEGLOT integration
 
-![Screenshot](resources/img/plugin-logo.png)
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later.
+This plugin requires Craft CMS 3.0.0-beta.23 or later. And you need [WEGLOT Account](https://weglot.com/).
 
 ## Installation
 
@@ -24,20 +23,45 @@ To install the plugin, follow these instructions.
 
 ## weglot-integration Overview
 
--Insert text here-
+This plugin provides to switch language easily via WEGLOT.
+WEGLOT translates automatically instead of you.
 
-## Configuring weglot-integration
+## Configure
 
--Insert text here-
+You need to get API Key from [WEGLOT Dashboard](https://dashboard.weglot.com/), and please save it on setting page.
 
-## Using weglot-integration
+## How to use
+### Twig Extension
+#### Automatically translation
 
--Insert text here-
+Enter ``` {{ weglot_snipet() }} ``` above "</body>" like below.
 
-## weglot-integration Roadmap
+```
 
-Some things to do, and ideas for potential features:
+{{ weglot_snipet() }}
+</body>
 
-* Release it
+```
 
-Brought to you by [Ippei Sumida](https://unplat.info)
+You can see a language switcher lower right. The page will be translated automatically if you switch other language.
+
+#### Manually translation
+
+Use bellow Twig filter if you want to translate manually.
+
+```
+{{ '攻殻機動隊' | weglot_translate('ja', 'en') }}
+Ghost in the Shell.
+```
+
+### Service
+
+You can also translate using plugin's service in your PHP Code.
+
+```php
+$text = 'Spirited Away';
+$from = 'en';
+$to = 'ja';
+$translated = \ippey\weglotintegration\Weglotintegration::getInstance()->weglotService->translate($text, $from, $to);
+echo ($translated); // 千と千尋の神隠し
+```
