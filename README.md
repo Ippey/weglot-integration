@@ -1,11 +1,11 @@
 # weglot-integration plugin for Craft CMS 3.x
 
-WEGLOT integration
+Weglot integration
 
 
 ## Requirements
 
-This plugin requires Craft CMS 3.0.0-beta.23 or later. And you need [WEGLOT Account](https://weglot.com/).
+This plugin requires Craft CMS 3.0.0-beta.23 or later. And you need [Weglot Account](https://weglot.com/).
 
 ## Installation
 
@@ -23,18 +23,18 @@ To install the plugin, follow these instructions.
 
 ## weglot-integration Overview
 
-This plugin provides to switch language easily via WEGLOT.
-WEGLOT translates automatically instead of you.
+This plugin provides to switch language easily via Weglot.
+Weglot translates automatically instead of you.
 
 ## Configure
 
-You need to get API Key from [WEGLOT Dashboard](https://dashboard.weglot.com/), and please save it on setting page.
+You need to get API Key from [Weglot Dashboard](https://dashboard.weglot.com/), and please save it on setting page.
 
 ## How to use
 ### Twig Extension
 #### Automatically translation
 
-Enter ``` {{ weglot_snipet() }} ``` above "</body>" like below.
+Enter ``` {{ weglot_snipet() }} ``` above "&lt;/body&gt;" like below.
 
 ```
 
