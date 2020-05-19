@@ -29,6 +29,9 @@ Weglot translates automatically instead of you.
 ## Configure
 
 You need to get API Key from [Weglot Dashboard](https://dashboard.weglot.com/), and please save it on setting page.
+This plugin uses "JavaScript Integration". Please click "Use JavaScript Integration", when you set up a Weglot Project.
+
+![](resources/img/1.png "Weglot Setup")
 
 ## How to use
 ### Twig Extension
