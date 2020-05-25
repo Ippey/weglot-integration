@@ -26,6 +26,8 @@ To install the plugin, follow these instructions.
 This plugin provides to switch language easily via Weglot.
 Weglot translates automatically instead of you.
 
+<a href="https://dashboard.weglot.com/register?fp_ref=ippei19" target="_blank" style="outline:none;border:none;"><img src="https://d2gdx5nv84sdx2.cloudfront.net/uploads/driklk34/marketing_asset/banner/689/Weglot_Combo_Blue_1.png" alt="weglot" border="0"/></a>
+
 ## Configure
 
 You need to get API Key from [Weglot Dashboard](https://dashboard.weglot.com/), and please save it on setting page.
