@@ -102,9 +102,10 @@ class WeglotintegrationTwigExtension extends AbstractExtension
      */
     public function snipet()
     {
-        $service = Weglotintegration::getInstance()->weglotService;
-        return Craft::$app->view->renderTemplate('weglot-integration/snipet', [
-            'apiKey' => $service->getApiKey(),
-        ]);
+        return '';
+//        $service = Weglotintegration::getInstance()->weglotService;
+//        return Craft::$app->view->renderTemplate('weglot-integration/snipet', [
+//            'apiKey' => $service->getApiKey(),
+//        ]);
     }
 }

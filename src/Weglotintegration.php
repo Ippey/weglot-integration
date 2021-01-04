@@ -129,6 +129,15 @@ class Weglotintegration extends Plugin
             }
         );
 
+        if (!preg_match('/^\/admin/', Craft::$app->request->url)) {
+            Event::on(View::class, View::EVENT_END_BODY, function() {
+                $service = Weglotintegration::getInstance()->weglotService;
+                echo Craft::$app->view->renderTemplate('weglot-integration/snipet', [
+                    'apiKey' => $service->getApiKey(),
+                ]);
+            });
+        }
+
         /**
          * Logging in Craft involves using one of the following methods:
          *
