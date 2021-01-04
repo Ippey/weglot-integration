@@ -11,3 +11,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 ## 0.1.1 - 2020-05-19
 ### Adjusted
 - Update description
+
+## 0.2.0 - 2021-01-04
+### Added
+- Adds Weglot's snippet tag automatically.
+- {{ weglot_snipet() }} returns empty, because this plugin adds it automatically this version.

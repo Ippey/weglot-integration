@@ -26,7 +26,9 @@ To install the plugin, follow these instructions.
 This plugin provides to switch language easily via Weglot.
 Weglot translates automatically instead of you.
 
-<a href="https://dashboard.weglot.com/register?fp_ref=ippei19" target="_blank" style="outline:none;border:none;"><img src="https://d2gdx5nv84sdx2.cloudfront.net/uploads/driklk34/marketing_asset/banner/689/Weglot_Combo_Blue_1.png" alt="weglot" border="0"/></a>
+<a href="https://dashboard.weglot.com/register?fp_ref=ippei19" target="_blank" style="outline:none;border:none;">
+<img src="resources/img/weglot_logo.png" alt="weglot" border="0"/>
+</a>
 
 ## Configure
 
@@ -38,15 +40,7 @@ This plugin uses "JavaScript Integration". Please click "Use JavaScript Integrat
 ## How to use
 ### Twig Extension
 #### Automatically translation
-
-Enter ``` {{ weglot_snipet() }} ``` above "&lt;/body&gt;" like below.
-
-```
-
-{{ weglot_snipet() }}
-</body>
-
-```
+**UPDATE** You don't need to use Twig filter. This plugin adds script tag automatically.
 
 You can see a language switcher lower right. The page will be translated automatically if you switch other language.
 
